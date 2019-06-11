@@ -1,4 +1,7 @@
 package com.lambdaschool.javaorders.repos;
 
-public interface OrderRepository {
+import com.lambdaschool.javaorders.model.Agent;
+import org.springframework.data.repository.CrudRepository;
+
+public interface OrderRepository extends CrudRepository<Agent, Long> {
 }

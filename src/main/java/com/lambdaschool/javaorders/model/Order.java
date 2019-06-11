@@ -14,7 +14,7 @@ public class Order {
 
     private double ordamount;
     private double advanceamount;
-    private String ordersescription;
+    private String orderdescription;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "custcode",
@@ -32,11 +32,11 @@ public class Order {
     {
     }
 
-    public Order(double ordamount, double advanceamount, Customer customer, Agent agents, String ordersescription)
+    public Order(double ordamount, double advanceamount, Customer customer, Agent agents, String orderdescription)
     {
         this.ordamount = ordamount;
         this.advanceamount = advanceamount;
-        this.ordersescription = ordersescription;
+        this.orderdescription = orderdescription;
         this.customer = customer;
         this.agent = agents;
     }
@@ -73,12 +73,12 @@ public class Order {
 
     public String getOrdersescription()
     {
-        return ordersescription;
+        return orderdescription;
     }
 
     public void setOrdersescription(String ordersescription)
     {
-        this.ordersescription = ordersescription;
+        this.orderdescription = ordersescription;
     }
 
     public Customer getCustomer()
